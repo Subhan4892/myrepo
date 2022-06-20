@@ -1,0 +1,14 @@
+# Image Size: 221MB
+
+# Linux + Node + Source + Project dependencies
+
+FROM node:ubuntu as base
+
+
+COPY package.json ./
+
+RUN npm install -g npm@8.9.0
+
+RUN npm install --force
+
+EXPOSE 8568
